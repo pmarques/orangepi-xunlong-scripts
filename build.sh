@@ -139,6 +139,7 @@ SelectDistro()
 		"0"   "[$SOURCES]Change repository server" \
 		"1"   "Ubuntu Xenial" \
 		"2"   "Debian Stretch" \
+		"3"   "Debian Buster" \
 		3>&1 1>&2 2>&3)
         if [ $OPTION = "0" ]; then
                 SelectSources
@@ -147,6 +148,9 @@ SelectDistro()
 		OS="ubuntu"
         elif [ $OPTION = "2" ]; then
                 TMP_DISTRO="stretch"
+		OS="debian"
+        elif [ $OPTION = "3" ]; then
+                TMP_DISTRO="buster"
 		OS="debian"
         fi
 }

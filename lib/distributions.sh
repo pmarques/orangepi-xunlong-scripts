@@ -193,7 +193,7 @@ prepare_env()
 		                        ;;
 		        esac
 		        ;;
-		stretch)
+		stretch|buster)
 			ROOTFS="${DISTRO}-base-arm.tar.gz"
 			METHOD="debootstrap"
 			case $SOURCES in
@@ -248,7 +248,7 @@ prepare_rootfs_server()
 		EXTRADEBS="software-properties-common libjpeg8-dev usbmount zram-config ubuntu-minimal"
 		ADDPPACMD=
 		DISPTOOLCMD=
-	elif [ "$DISTRO" = "sid" -o "$DISTRO" = "stretch" -o "$DISTRO" = "stable" ]; then
+	elif [ "$DISTRO" = "sid" -o "$DISTRO" = "stretch" -o "$DISTRO" = "buster" -o "$DISTRO" = "stable" ]; then
 		DEB=debian
 		DEBUSER=orangepi
 		EXTRADEBS="sudo net-tools g++ libjpeg-dev"
