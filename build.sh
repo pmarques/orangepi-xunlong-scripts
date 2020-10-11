@@ -18,7 +18,7 @@ BOOT_PATH=""
 UBOOT_PATH=""
 ROOTFS_PATH=""
 
-SOURCES="CN"
+SOURCES="OFCL"
 METHOD="download"
 UNTAR="bsdtar -xpf"
 CORES=$(nproc --ignore=1)
